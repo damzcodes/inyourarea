@@ -1,0 +1,14 @@
+<h1> Home </h1>
+
+<%= form_tag(class: "form-inline") do |f| %>
+
+      <div class="field">
+        <%= label_tag :postcode %><br />
+        <%= text_field_tag(:postcode, @postcode, class: 'form-control') %>
+      </div>
+
+      <div class="actions">
+        <%= submit_tag "Find my area", class: 'btn btn-primary' %>
+      </div>
+
+  <% end %>
