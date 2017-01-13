@@ -8,8 +8,8 @@ class ConstituenciesController < ApplicationController
     if params[:postcode]
       if area = PostcodeApi.new.get_area_code_from_postcode(params[:postcode])
         # @constituency = Constituency.find(params[:id])
-        # if @area = @representative_mobilisation.areas.find_by_code(area[:code])
-        #   redirect_to "/areas/#{@area.id}"
+        # if @area = @constituency.find_by(area[:code])
+        #   redirect_to "center of constituency on map"
         # else
           @constituency = Constituency.find(params[:id])
           @postcode = params[:postcode]
